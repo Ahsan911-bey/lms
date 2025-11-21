@@ -61,7 +61,10 @@ public class StudentService {
         return convertToDTO(student);
     }
     public String deleteStudent(long id){
+        if(!studentRepository.existsById(id)){
+            throw new RuntimeException("Student Not Found with id"+id);
+        }
         studentRepository.deleteById(id);
-        return "Student Deleted with id: "+id;
+        return "Student Deleted with id: "+id;        
     }
 }

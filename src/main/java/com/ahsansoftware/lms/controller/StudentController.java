@@ -1,6 +1,5 @@
 package com.ahsansoftware.lms.controller;
 
-import com.ahsansoftware.lms.model.Student;
 import com.ahsansoftware.lms.service.StudentService;
 
 import org.springframework.beans.factory.annotation.Autowired;

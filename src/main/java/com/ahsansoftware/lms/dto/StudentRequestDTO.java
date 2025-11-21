@@ -30,6 +30,4 @@ public class StudentRequestDTO {
     public void setEmail(String email){
         this.email = email;
     }
-
-
 }
