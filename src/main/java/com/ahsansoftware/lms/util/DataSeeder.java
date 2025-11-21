@@ -20,9 +20,9 @@ public class DataSeeder {
             
             List<Student> sampleStudents = Arrays.asList(
                 new Student(null , "Ahsan Khan", "ahsan.khan@university.edu"),
-                new Student(null ,"Maria Ahmed", "maria.ahmed@university.edu"),
+                new Student(null ,"Ali Ahmed", "maria.ahmed@university.edu"),
                 new Student(null ,"John Smith", "john.smith@university.edu"),
-                new Student(null ,"Fatima Raza", "fatima.raza@university.edu"),
+                new Student(null ,"Ayesha Raza", "fatima.raza@university.edu"),
                 new Student(null ,"Ali Hassan", "ali.hassan@university.edu")
             );
             
