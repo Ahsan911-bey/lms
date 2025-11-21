@@ -2,10 +2,15 @@ package com.ahsansoftware.lms.controller;
 
 import com.ahsansoftware.lms.model.Student;
 import com.ahsansoftware.lms.service.StudentService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.List;
+
+import com.ahsansoftware.lms.dto.StudentRequestDTO;
+import com.ahsansoftware.lms.dto.StudentResponseDTO;
 
 @RestController
 @RequestMapping("/students")
@@ -16,22 +21,22 @@ public class StudentController {
 
     
     @GetMapping
-    public List<Student> getAllStudents() {
+    public List<StudentResponseDTO> getAllStudents() {
         return studentService.getAllStudents();
     }
 
     @GetMapping("/{id}")
-    public Student getStudentById(@PathVariable long id){
+    public StudentResponseDTO getStudentById(@PathVariable long id){
         return studentService.getStudentById(id);
     }
 
     @PostMapping
-    public Student createStudent(@RequestBody Student student){
-        return studentService.createStudent(student);
+    public StudentResponseDTO createStudent(@Valid @RequestBody StudentRequestDTO studentDTO){
+        return studentService.createStudent(studentDTO);
     }
 
     @PutMapping("/{id}")
-    public Student updateStudent(@PathVariable long id , @RequestBody Student studentDetails){
+    public StudentResponseDTO updateStudent(@PathVariable long id ,@Valid @RequestBody StudentRequestDTO studentDetails){
         return studentService.updateStudent(id, studentDetails);
     }
     @DeleteMapping("/{id}")
