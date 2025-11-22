@@ -1,6 +1,6 @@
 
 
-# **Student Management Portal – Backend API**
+# **University Student Portal – Backend API (Under Process)**
 
 Welcome to the backend API repository for the **University Student Management Portal** project.
 This project is a **RESTful API built with Spring Boot**, designed to manage **student records** and **course enrollments**.
@@ -111,5 +111,3 @@ A global exception handler (`@ControllerAdvice`) ensures consistent responses:
 Update your `git clone` URL with your actual GitHub repository link before publishing!
 
 ---
-
-If you'd like, I can turn this into a **README.md file**, add **logos**, or generate a **GitHub-ready professional template**.
