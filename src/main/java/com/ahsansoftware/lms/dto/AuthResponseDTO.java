@@ -8,7 +8,7 @@ public class AuthResponseDTO {
 
     AuthResponseDTO(){}
 
-    AuthResponseDTO(String token , String message , String userName){
+    public AuthResponseDTO(String token , String message , String userName){
         this.token = token;
         this.message = message;
         this.userName = userName;
