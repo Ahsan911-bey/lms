@@ -28,7 +28,7 @@ public class AuthService {
     private PasswordEncoder passwordEncoder;
 
     @Autowired
-    private CustomUserDetialsService userDetialsService;
+    private CustomUserDetailsService userDetialsService;
 
     public AuthResponseDTO login(AuthRequestDTO authRequest){
         authenticationManager.authenticate(
