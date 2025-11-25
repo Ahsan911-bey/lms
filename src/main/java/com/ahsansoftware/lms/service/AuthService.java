@@ -43,7 +43,7 @@ public class AuthService {
 
     public AuthResponseDTO register(AuthRequestDTO authRequest){
 
-        if(userRepository.exsistsByUsername(authRequest.getUsername())){
+        if(userRepository.existsByUsername(authRequest.getUsername())){
             throw new RuntimeException("Username is Already Taken");
         }
 
@@ -51,7 +51,7 @@ public class AuthService {
 
         user.setUsername(authRequest.getUsername());
         user.setEmail(authRequest.getUsername() + "@Comsats.edu.pk");
-        user.setPassword(authRequest.getPassword());
+        user.setPassword(passwordEncoder.encode(authRequest.getPassword()));
         user.setRole("USER");
 
         userRepository.save(user);
